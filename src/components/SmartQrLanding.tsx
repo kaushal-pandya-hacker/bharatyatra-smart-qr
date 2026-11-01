@@ -12,11 +12,6 @@ import {
   ArrowUpRight,
   ShieldCheck,
   Heart,
-  QrCode,
-  Download,
-  Calendar,
-  Layers,
-  Sparkle,
 } from 'lucide-react';
 import { SMART_QR_CONFIG, SmartQrButtonConfig } from '../config/smart-qr-config';
 import { AshokaChakraIcon } from './AshokaChakraIcon';
@@ -41,7 +36,6 @@ function WhatsAppIcon({ className = 'w-4 h-4 text-white' }: { className?: string
 
 export function SmartQrLanding() {
   const [copied, setCopied] = useState(false);
-  const [showQrModal, setShowQrModal] = useState(false);
 
   const handleShare = async () => {
     const url = SMART_QR_CONFIG.brand.landingPageUrl;
@@ -268,19 +262,11 @@ export function SmartQrLanding() {
                 <img
                   src="./BHARATYATRA-SMART-QR-PRINT.png"
                   alt="BharatYatra Smart QR"
-                  className="w-20 h-20 rounded-xl bg-white p-1 border border-slate-200 shadow-2xs shrink-0"
+                  className="w-16 h-16 rounded-xl bg-white p-1 border border-slate-200 shadow-2xs shrink-0"
                 />
-                <div className="space-y-1">
-                  <div className="text-xs font-bold text-[#0A192F]">Official Print Asset</div>
-                  <div className="text-[11px] text-slate-500">Scan-tested with 100% OpenCV computer vision decode.</div>
-                  <button
-                    type="button"
-                    onClick={() => setShowQrModal(true)}
-                    className="text-[11px] font-bold text-blue-700 hover:underline inline-flex items-center gap-1"
-                  >
-                    <span>View All Print Assets</span>
-                    <ChevronRight className="w-3 h-3" />
-                  </button>
+                <div className="space-y-0.5">
+                  <div className="text-xs font-bold text-[#0A192F]">Official Digital Pass</div>
+                  <div className="text-[11px] text-slate-500">Scan-tested sovereign gateway across all 36 States &amp; UTs.</div>
                 </div>
               </div>
             </div>
@@ -527,105 +513,9 @@ export function SmartQrLanding() {
                 </a>
               </div>
             </div>
-
-            {/* QUICK DOWNLOAD TRIGGER BUTTON */}
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => setShowQrModal(true)}
-                className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-slate-900 to-[#102B4E] text-white flex items-center justify-between shadow-md hover:shadow-lg transition-all active:scale-[0.98]"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center">
-                    <QrCode className="w-4 h-4 text-amber-400" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs font-bold text-white">Download Official QR Assets</div>
-                    <div className="text-[10px] text-slate-300">Print-Safe PNG, Vector SVG &amp; PDF Cards</div>
-                  </div>
-                </div>
-                <Download className="w-4 h-4 text-amber-400" />
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* MODAL: QR DOWNLOAD DRAWER */}
-      {showQrModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-sm sm:max-w-md w-full p-5 sm:p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-              <h3 className="font-extrabold text-[#0A192F] text-base">Official QR &amp; Print Assets</h3>
-              <button
-                type="button"
-                onClick={() => setShowQrModal(false)}
-                className="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-sm font-bold hover:bg-slate-200"
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="space-y-2.5 text-xs">
-              <a
-                href="./BHARATYATRA-SMART-QR-PRINT.png"
-                download
-                className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 font-semibold transition-colors"
-              >
-                <div>
-                  <div className="text-[#0A192F] font-bold">1. Print-Safe QR (PNG)</div>
-                  <div className="text-[11px] text-slate-500">100% High-Contrast B&amp;W for Business Cards</div>
-                </div>
-                <Download className="w-4 h-4 text-blue-700 shrink-0" />
-              </a>
-
-              <a
-                href="./BHARATYATRA-SMART-QR-COLOUR.png"
-                download
-                className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 font-semibold transition-colors"
-              >
-                <div>
-                  <div className="text-[#0A192F] font-bold">2. Tricolour QR (PNG)</div>
-                  <div className="text-[11px] text-slate-500">Digital Brochures &amp; Marketing Flyers</div>
-                </div>
-                <Download className="w-4 h-4 text-orange-600 shrink-0" />
-              </a>
-
-              <a
-                href="./BHARATYATRA-SMART-QR.svg"
-                download
-                className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 font-semibold transition-colors"
-              >
-                <div>
-                  <div className="text-[#0A192F] font-bold">3. Vector QR (SVG)</div>
-                  <div className="text-[11px] text-slate-500">Infinite Resolution for Professional Press</div>
-                </div>
-                <Download className="w-4 h-4 text-emerald-700 shrink-0" />
-              </a>
-
-              <a
-                href="./BHARATYATRA_BUSINESS_CARD_PRINT_READY.pdf"
-                download
-                className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 font-semibold transition-colors"
-              >
-                <div>
-                  <div className="text-[#0A192F] font-bold">4. Business Card Print PDF</div>
-                  <div className="text-[11px] text-slate-500">3.5" x 2.0" Front &amp; Back Vector PDF</div>
-                </div>
-                <Download className="w-4 h-4 text-purple-700 shrink-0" />
-              </a>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => setShowQrModal(false)}
-              className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition-colors"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
