@@ -256,19 +256,6 @@ export function SmartQrLanding() {
                   {SMART_QR_CONFIG.brand.description}
                 </p>
               </div>
-
-              {/* Physical Business Card QR Graphic Preview */}
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center gap-4">
-                <img
-                  src="./BHARATYATRA-SMART-QR-PRINT.png"
-                  alt="BharatYatra Smart QR"
-                  className="w-16 h-16 rounded-xl bg-white p-1 border border-slate-200 shadow-2xs shrink-0"
-                />
-                <div className="space-y-0.5">
-                  <div className="text-xs font-bold text-[#0A192F]">Official Digital Pass</div>
-                  <div className="text-[11px] text-slate-500">Scan-tested sovereign gateway across all 36 States &amp; UTs.</div>
-                </div>
-              </div>
             </div>
 
             {/* Direct Executive Support Console */}
