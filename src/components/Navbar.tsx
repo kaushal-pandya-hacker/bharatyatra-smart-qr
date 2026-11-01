@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, QrCode, ScanLine, Compass, Sparkles, Phone, ExternalLink } from 'lucide-react';
+import { Menu, X, Compass, Sparkles, Phone, ExternalLink } from 'lucide-react';
 import { AshokaChakraIcon } from './AshokaChakraIcon';
 
 export function Navbar() {
@@ -17,8 +17,6 @@ export function Navbar() {
   const navLinks = [
     { label: 'Smart Pass', href: '#smart-pass' },
     { label: '6 Actions', href: '#actions' },
-    { label: 'QR Studio', href: '#qr-studio' },
-    { label: 'QR Scanner', href: '#qr-scanner' },
     { label: 'Destinations', href: '#destinations' },
     { label: 'Concierge', href: '#contact' },
   ];
@@ -34,14 +32,13 @@ export function Navbar() {
 
       {/* 2. Main Navigation Bar */}
       <nav
-        className={`w-full border-b transition-all duration-200 ${
-          scrolled
+        className={`w-full border-b transition-all duration-200 ${scrolled
             ? 'bg-white/95 backdrop-blur-md border-slate-200/90 shadow-xs py-2.5 sm:py-3'
             : 'bg-white/90 backdrop-blur-sm border-slate-200/60 py-3 sm:py-3.5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
+
           {/* Brand Logo & Title */}
           <a href="#smart-pass" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white p-1 border border-slate-200 shadow-xs flex items-center justify-center transition-transform group-hover:scale-105">
@@ -82,11 +79,14 @@ export function Navbar() {
           {/* Right Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="#qr-studio"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#0A192F] to-[#1E3A8A] text-white text-xs font-bold hover:brightness-110 transition-all shadow-xs"
+              href="https://www.bharatyatra.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#0A192F] text-xs font-bold transition-all shadow-2xs"
             >
-              <QrCode className="w-3.5 h-3.5 text-amber-400" />
-              <span>QR Studio</span>
+              <Compass className="w-3.5 h-3.5 text-[#0A192F]" />
+              <span>Visit Portal</span>
+              <ExternalLink className="w-3 h-3 text-slate-500" />
             </a>
 
             <a
@@ -131,12 +131,15 @@ export function Navbar() {
 
             <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
               <a
-                href="#qr-studio"
+                href="https://www.bharatyatra.in"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#0A192F] text-xs font-bold flex items-center justify-center gap-2"
               >
-                <QrCode className="w-4 h-4 text-amber-400" />
-                <span>Open QR Generator &amp; Verification Studio</span>
+                <Compass className="w-4 h-4 text-[#0A192F]" />
+                <span>Visit Main Portal (bharatyatra.in)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
               </a>
 
               <a
@@ -157,3 +160,4 @@ export function Navbar() {
     </header>
   );
 }
+

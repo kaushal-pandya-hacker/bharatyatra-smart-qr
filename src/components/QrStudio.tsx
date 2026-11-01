@@ -187,13 +187,13 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch {}
+    } catch { }
   };
 
   return (
     <section id="qr-studio" className="w-full py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200/80">
       <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
-        
+
         {/* Section Header */}
         <div className="text-center space-y-2 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 shadow-2xs">
@@ -212,10 +212,10 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
 
         {/* Studio Grid: Controls (Left) & Canvas Preview (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          
+
           {/* Controls Column (7 Cols on LG) */}
           <div className="lg:col-span-7 bg-[#FAFAFA] p-5 sm:p-7 rounded-3xl border border-slate-200 space-y-5">
-            
+
             {/* Input URL */}
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-[#0A192F] uppercase tracking-wider block">
@@ -252,11 +252,10 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
                 <button
                   type="button"
                   onClick={() => setTheme('tricolour')}
-                  className={`p-3 rounded-xl border text-left transition-all ${
-                    theme === 'tricolour'
+                  className={`p-3 rounded-xl border text-left transition-all ${theme === 'tricolour'
                       ? 'border-[#FF9933] bg-[#FFFBF5] shadow-xs ring-1 ring-[#FF9933]'
                       : 'border-slate-200 bg-white hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
@@ -270,11 +269,10 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
                 <button
                   type="button"
                   onClick={() => setTheme('print-mono')}
-                  className={`p-3 rounded-xl border text-left transition-all ${
-                    theme === 'print-mono'
+                  className={`p-3 rounded-xl border text-left transition-all ${theme === 'print-mono'
                       ? 'border-slate-900 bg-slate-100 shadow-xs ring-1 ring-slate-900'
                       : 'border-slate-200 bg-white hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-black" />
@@ -287,11 +285,10 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
                 <button
                   type="button"
                   onClick={() => setTheme('navy')}
-                  className={`p-3 rounded-xl border text-left transition-all ${
-                    theme === 'navy'
+                  className={`p-3 rounded-xl border text-left transition-all ${theme === 'navy'
                       ? 'border-[#102B4E] bg-blue-50/50 shadow-xs ring-1 ring-[#102B4E]'
                       : 'border-slate-200 bg-white hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#0A192F]" />
@@ -304,11 +301,10 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
                 <button
                   type="button"
                   onClick={() => setTheme('saffron')}
-                  className={`p-3 rounded-xl border text-left transition-all ${
-                    theme === 'saffron'
+                  className={`p-3 rounded-xl border text-left transition-all ${theme === 'saffron'
                       ? 'border-[#E65100] bg-orange-50/50 shadow-xs ring-1 ring-[#E65100]'
                       : 'border-slate-200 bg-white hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-1.5 mb-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#E65100]" />
@@ -370,7 +366,7 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
 
           {/* Preview & Live Verification Column (5 Cols on LG) */}
           <div className="lg:col-span-5 bg-[#FAFAFA] p-5 sm:p-7 rounded-3xl border border-slate-200 flex flex-col items-center justify-center space-y-4">
-            
+
             {/* Live QR Canvas Frame */}
             <div className="relative p-3.5 rounded-2xl bg-white border border-slate-200 shadow-md max-w-[280px] sm:max-w-[320px] w-full aspect-square flex items-center justify-center">
               <canvas
@@ -428,3 +424,4 @@ export function QrStudio({ initialUrl = 'https://www.bharatyatra.in/qr/' }: QrSt
     </section>
   );
 }
+

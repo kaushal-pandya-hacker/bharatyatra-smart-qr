@@ -131,7 +131,7 @@ export function QrScanner() {
   return (
     <section id="qr-scanner" className="w-full py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#FAFAFA]">
       <div className="max-w-4xl mx-auto space-y-6">
-        
+
         {/* Header */}
         <div className="text-center space-y-2 max-w-xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs">
@@ -150,7 +150,7 @@ export function QrScanner() {
 
         {/* Scanner Card */}
         <div className="bg-white p-5 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-5">
-          
+
           {/* Controls: Upload vs Camera */}
           <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
             <button
@@ -258,3 +258,4 @@ export function QrScanner() {
     </section>
   );
 }
+

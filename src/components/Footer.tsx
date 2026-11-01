@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer id="contact" className="w-full border-t border-slate-200/80 bg-white/95 backdrop-blur-md text-center py-8 px-4 sm:px-6 lg:px-8 space-y-4">
       <div className="max-w-7xl mx-auto space-y-4">
-        
+
         {/* Navigation Quick Links */}
         <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-1.5 text-xs text-slate-500 font-bold">
           <a href="https://www.bharatyatra.in" className="hover:text-[#0A192F] transition-colors">
@@ -54,3 +54,4 @@ export function Footer() {
     </footer>
   );
 }
+

@@ -103,19 +103,15 @@ async function runAudit() {
     // Check 2: Key elements rendered and visible
     const elementCheck = await page.evaluate(() => {
       const primaryButtons = document.querySelectorAll('#primary-action-buttons a');
-      const qrCanvas = document.querySelector('#qr-studio canvas');
-      const qrScanner = document.querySelector('#qr-scanner');
       const logo = document.querySelector('img[alt*="Emblem"], img[alt*="Logo"]');
 
       return {
         buttonCount: primaryButtons.length,
-        hasQrCanvas: !!qrCanvas,
-        hasScanner: !!qrScanner,
         hasLogo: !!logo,
       };
     });
 
-    const isPass = !overflowCheck.hasHorizontalScroll && elementCheck.buttonCount === 6 && elementCheck.hasQrCanvas;
+    const isPass = !overflowCheck.hasHorizontalScroll && elementCheck.buttonCount === 6;
     if (!isPass) allPassed = false;
 
     results.push({
@@ -124,12 +120,10 @@ async function runAudit() {
       height: vp.height,
       overflow: overflowCheck.hasHorizontalScroll ? `FAIL (+${overflowCheck.overflowDelta}px)` : 'PASS (0px)',
       buttonCount: elementCheck.buttonCount,
-      qrCanvas: elementCheck.hasQrCanvas ? 'PASS' : 'FAIL',
-      qrScanner: elementCheck.hasScanner ? 'PASS' : 'FAIL',
       status: isPass ? 'PASS' : 'FAIL',
     });
 
-    console.log(`[${isPass ? 'PASS' : 'FAIL'}] ${vp.name.padEnd(28)} | Overflow: ${overflowCheck.hasHorizontalScroll ? 'FAIL (' + overflowCheck.overflowDelta + 'px)' : '0px (None)'} | Buttons: ${elementCheck.buttonCount}/6 | QR Canvas: ${elementCheck.hasQrCanvas ? 'Yes' : 'No'}`);
+    console.log(`[${isPass ? 'PASS' : 'FAIL'}] ${vp.name.padEnd(28)} | Overflow: ${overflowCheck.hasHorizontalScroll ? 'FAIL (' + overflowCheck.overflowDelta + 'px)' : '0px (None)'} | Buttons: ${elementCheck.buttonCount}/6`);
 
     // Capture representative screenshots
     if ([320, 390, 768, 1280, 1920].includes(vp.width)) {
