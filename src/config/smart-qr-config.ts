@@ -64,11 +64,11 @@ export const SMART_QR_CONFIG = {
       order: 4,
       label: 'FOLLOW INSTAGRAM',
       subtitle: 'Get travel inspiration, destination videos, updates and offers',
-      destinationUrl: 'https://www.instagram.com/bharatyatra/',
+      destinationUrl: 'https://www.instagram.com/bharat.yatra29?rpxt=MXJnMnQ2NG9sa2duYg==',
       isExternal: true,
       iconName: 'Instagram',
       themeColor: 'saffron',
-      badgeText: '📸 @bharatyatra',
+      badgeText: '📸 @bharat.yatra29',
     },
     {
       id: 'become-a-travel-partner',
@@ -102,3 +102,4 @@ export const SMART_QR_CONFIG = {
     workingHours: 'Monday to Sunday, 24/7 Concierge Support',
   },
 };
+

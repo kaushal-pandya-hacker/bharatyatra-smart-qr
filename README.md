@@ -23,7 +23,7 @@ All QR scans lead directly to this landing page, which features the exact six cu
 1. **PLAN YOUR TRIP** (`/plan`) — AI Trip Planner for personalized itineraries.
 2. **EXPLORE DESTINATIONS** (`/destinations`) — 36 States and Union Territories discovery directory.
 3. **EXPLORE TOUR PACKAGES** (`/packages`) — Handcrafted tour packages across India.
-4. **FOLLOW US ON INSTAGRAM** (`https://www.instagram.com/bharatyatra/`) — Official Instagram channel.
+4. **FOLLOW US ON INSTAGRAM** (`https://www.instagram.com/bharat.yatra29?rpxt=MXJnMnQ2NG9sa2duYg==`) — Official Instagram channel (`@bharat.yatra29`).
 5. **BECOME A TRAVEL PARTNER** (`/partners/register`) — Travel partner network registration.
 6. **CONTACT US** (`/contact`) — 24/7 direct executive support and traveler assistance.
 
@@ -75,3 +75,4 @@ npm run build
 ---
 
 © 2026 BharatYatra Technologies Private Limited. All rights reserved.
+
