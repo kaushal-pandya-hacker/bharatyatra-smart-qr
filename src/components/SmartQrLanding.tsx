@@ -104,6 +104,7 @@ export function SmartQrLanding() {
           badgeBg: 'bg-pink-500/10 text-[#C13584] border border-pink-500/30',
           titleColor: 'text-[#102B4E] group-hover:text-[#E1306C]',
         };
+      case 'become-travel-partner':
       case 'become-a-travel-partner':
         return {
           cardBg: 'bg-gradient-to-r from-[#F6F7FA] via-white to-[#EEF2F6]',

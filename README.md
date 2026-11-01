@@ -24,7 +24,7 @@ All QR scans lead directly to this landing page, which features the exact six cu
 2. **EXPLORE DESTINATIONS** (`/destinations`) — 36 States and Union Territories discovery directory.
 3. **EXPLORE TOUR PACKAGES** (`/packages`) — Handcrafted tour packages across India.
 4. **FOLLOW US ON INSTAGRAM** (`https://www.instagram.com/bharat.yatra29?rpxt=MXJnMnQ2NG9sa2duYg==`) — Official Instagram channel (`@bharat.yatra29`).
-5. **BECOME A TRAVEL PARTNER** (`/partners/register`) — Travel partner network registration.
+5. **BECOME A TRAVEL PARTNER** (`https://docs.google.com/forms/d/e/1FAIpQLSewIzuJ-bHesdiGlYuPijBvVF4AhYSdvb158GA4cgsKXIzYyQ/viewform`) — Travel partner network registration form.
 6. **CONTACT US** (`/contact`) — 24/7 direct executive support and traveler assistance.
 
 ---
