@@ -38,17 +38,18 @@ export function SmartQrLanding() {
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    const url = SMART_QR_CONFIG.brand.landingPageUrl;
+    const shareMessage =
+      'Discover India with BharatYatra! Explore destinations, plan trips, and experience more. Visit https://www.bharatyatra.in/qr/';
     const title = 'BharatYatra — Discover India. Travel Better.';
-    const text = "Check out BharatYatra, India's premier AI travel platform.";
+    const url = SMART_QR_CONFIG.brand.landingPageUrl;
 
     if (navigator.share) {
       try {
-        await navigator.share({ title, text, url });
+        await navigator.share({ title, text: shareMessage, url });
       } catch {}
     } else {
       try {
-        await navigator.clipboard.writeText(url);
+        await navigator.clipboard.writeText(shareMessage);
         setCopied(true);
         setTimeout(() => setCopied(false), 2500);
       } catch {}

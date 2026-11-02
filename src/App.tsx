@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { SmartQrLanding } from './components/SmartQrLanding';
+import { NexiifyAgencyBanner } from './components/NexiifyAgencyBanner';
 import { Footer } from './components/Footer';
 
 export function App() {
@@ -12,9 +13,12 @@ export function App() {
       {/* 2. Primary Customer & Business Card Smart Pass Section */}
       <main className="flex-1 w-full">
         <SmartQrLanding />
+        
+        {/* 3. Official Technology Partner — Nexiify Web Agency Promotion */}
+        <NexiifyAgencyBanner />
       </main>
 
-      {/* 3. Responsive Tricolour Footer */}
+      {/* 4. Responsive Tricolour Footer with Agency Credits */}
       <Footer />
     </div>
   );

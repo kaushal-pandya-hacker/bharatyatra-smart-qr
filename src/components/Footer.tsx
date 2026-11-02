@@ -1,6 +1,5 @@
 import React from 'react';
-import { Heart, ShieldCheck } from 'lucide-react';
-import { AshokaChakraIcon } from './AshokaChakraIcon';
+import { Heart, ExternalLink } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -38,14 +37,30 @@ export function Footer() {
           </a>
         </div>
 
-        {/* Brand & Made with Love */}
-        <div className="flex flex-wrap items-center justify-center gap-1.5 text-[11px] text-slate-400">
-          <span>Official Sovereign Smart QR Portal of</span>
-          <strong className="text-slate-700 font-extrabold uppercase">BharatYatra</strong>
-          <span>•</span>
-          <span className="flex items-center gap-1 font-medium text-slate-500">
-            Made with <Heart className="w-3 h-3 text-red-500 fill-red-500 inline" /> in India
-          </span>
+        {/* Copyright & Agency Brand Credit */}
+        <div className="space-y-1 pt-1">
+          <p className="text-xs font-semibold text-slate-500">
+            &copy; 2026 BharatYatra. All Rights Reserved.
+          </p>
+          <p className="text-xs text-slate-500 flex items-center justify-center gap-1 font-medium">
+            <span>Designed &amp; Developed with</span>
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline" aria-label="love" />
+            <span>by</span>
+            <a
+              href="https://nexiify.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[#0A192F] hover:text-cyan-600 transition-colors inline-flex items-center gap-0.5 underline decoration-slate-300 hover:decoration-cyan-500 underline-offset-2"
+            >
+              <span>Nexiify Web Agency</span>
+              <ExternalLink className="w-3 h-3 text-slate-400" />
+            </a>
+          </p>
+        </div>
+
+        {/* Made in India Sovereignty Note */}
+        <div className="text-[11px] text-slate-400">
+          Official Sovereign Smart QR Portal • Made in India
         </div>
 
         {/* Bottom Tricolour Ribbon */}
@@ -54,4 +69,3 @@ export function Footer() {
     </footer>
   );
 }
-

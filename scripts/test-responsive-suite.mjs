@@ -46,6 +46,7 @@ const VIEWPORTS = [
   { name: 'Standard mobile (360x800)', width: 360, height: 800, isMobile: true },
   { name: 'Mobile (375x812)', width: 375, height: 812, isMobile: true },
   { name: 'Large mobile (390x844)', width: 390, height: 844, isMobile: true },
+  { name: 'Mobile Plus/XR (414x896)', width: 414, height: 896, isMobile: true },
   { name: 'Large mobile (430x932)', width: 430, height: 932, isMobile: true },
   { name: 'Small tablet (600x960)', width: 600, height: 960, isMobile: true },
   { name: 'Tablet (768x1024)', width: 768, height: 1024, isMobile: false },
@@ -104,14 +105,22 @@ async function runAudit() {
     const elementCheck = await page.evaluate(() => {
       const primaryButtons = document.querySelectorAll('#primary-action-buttons a');
       const logo = document.querySelector('img[alt*="Emblem"], img[alt*="Logo"]');
+      const agencyBanner = document.querySelector('#agency-credit');
+      const footerCredit = document.querySelector('footer a[href*="nexiify.in"]');
 
       return {
         buttonCount: primaryButtons.length,
         hasLogo: !!logo,
+        hasAgencyBanner: !!agencyBanner,
+        hasFooterCredit: !!footerCredit,
       };
     });
 
-    const isPass = !overflowCheck.hasHorizontalScroll && elementCheck.buttonCount === 6;
+    const isPass =
+      !overflowCheck.hasHorizontalScroll &&
+      elementCheck.buttonCount === 6 &&
+      elementCheck.hasAgencyBanner &&
+      elementCheck.hasFooterCredit;
     if (!isPass) allPassed = false;
 
     results.push({

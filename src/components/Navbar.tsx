@@ -18,6 +18,7 @@ export function Navbar() {
     { label: 'Smart Pass', href: '#smart-pass' },
     { label: '6 Actions', href: '#actions' },
     { label: 'Destinations', href: '#destinations' },
+    { label: 'Agency Partner', href: '#agency-credit' },
     { label: 'Concierge', href: '#contact' },
   ];
 
